@@ -4,33 +4,262 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
     <style>
         *{
-            margin: 0 auto;
-            padding: 0 auto;
-            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: url('../images/bg.jpeg');
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 16px;
+}
+#wrapper{
+    height: 300px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+#form-login{
+    max-width: 400px;
+    background: rgba(0, 0, 0 , 0.8);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
+}
+.form-heading{
+    font-size: 25px;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group{
+    border-bottom: 1px solid #fff;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.form-group i{
+    color: #fff;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #f5f5f5;
+    flex-grow: 1;
+}
+.form-input::placeholder{
+    color: #f5f5f5;
+}
+#eye i{
+    padding-right: 0;
+    cursor: pointer;
+}
 
-        }
-        input{
-            width: 30%;
-        }
+.form-submit{
+    background: transparent;
+    border: 1px solid #f5f5f5;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+}
+.form-submit:hover{
+    border: 1px solid #54a0ff;
+}
+footer{
+    max-width: 1980px;
+    height: 500px;
+    font-variant:small-caps;
+    background-color: #FFFAFA;
+    clear: both;
+}
+.end{
+    width: 1300px;
+    margin: auto;
+    height: 300px;
+}
+
+.foter{
+    margin-top: 20px;
+    width: 33%;
+    height: 200px;
+    float: left;
+    text-align: center;
+}
+
+h2{
+font-weight: bold;
+}
+.link{
+width: auto;
+border-radius:10px;
+margin:10px;
+
+
+}
+.dowload img{
+padding-top: 10px;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+.container{
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+header{
+    width: 100%;
+    height: 100px;
+}
+header > nav{
+    line-height: 50px;
+    background-color: #336666;
+    color: black;
+    text-align: center;
+    
+}
+.menu >ul >li{
+    display:inline-block;
+    position:relative;
+    text-align: center;
+    
+}
+.menu>ul>li>a{
+    display:block;
+    text-decoration:none;
+    
+    color: white;
+    padding:0 10px;
+    line-height:40px;  
+}
+.menu>ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    border-radius:3px;
+    background-color:orangered;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.menu>ul>li>a:hover{
+    color:gray;
+}
+
+.menu>ul>li:hover>ul{
+    display:block;
+    background-color:orangered;
+    color:white;
+}
+.menu  ul a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    
+    font-size:larger;
+    padding:0 10;
+}
+.a1{
+    float: left;
+    margin: 25px;
+}
+main{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
     </style>
+
+    <title>Login</title>
 </head>
 <body>
     <div class="container">
-        <form action="">
-            <h1>Trang đăng nhập</h1>
-            <div>
-                <h3>tên dăng nhập</h3>
+        <header>
+            <nav class="menu">
+                <ul>
+                   <img class="a1" src="/img/fpt_logo.jpg" alt="" width="100px">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ</a>
+                    <li><a href="#">Góp ý</a></li>
+                    <li><a href="#">Giỏi đáp</a></li>
+                    
+                    
+            </nav>
+            <div class="img"></div>
+        </header>
+    </div>
+    <main>
+    <div id="wrapper">
+        <form action="" id="form-login">
+            <h1 class="form-heading">Đăng Nhập</h1>
+            <div class="form-group">
+                <i class="far fa-user"></i>
+                <input type="text" class="form-input" placeholder="Tên đăng nhập">
             </div>
-            <div>
-            <input type="text"></div>
-            <div><h3>Password</h3></div>
-            <div><input type="password" placeholder="Nhập mật khẩu"></div>
-            <div><input type="checkbox">nhớ mật khẩu</div>
-            <div><button>Dăng nhập</button></div>
+            <div class="form-group">
+                <i class="fas fa-key"></i>
+                <input type="password" class="form-input" placeholder="Mật khẩu">
+                <div id="eye">
+                    <i class="far fa-eye"></i>
+                </div>
+            </div>
+            <input type="submit" value="Đăng nhập" class="form-submit">
         </form>
     </div>
+</main>
+    <footer>
+        <div class="end">
+             <div class="cskh foter">
+                <h2>chăm sóc khách hàng</h2>
+                <div class="link"><a href="#" >
+                    Thanh toán 
+                </a></div> 
+                <div class="link"><a href="#" >
+                    Vận chuyển 
+                </a></div> 
+                <div class="link"><a href="#" >
+                    chính sách bảo hành
+                </a></div> 
+             </div>
+             <div class="bank foter"><h2>thanh toán</h2>
+                <div class="link"><img src="/img/visa.jfif" alt="hinh" width="150px">
+                </div>
+                    <img src="/img/zalo.png" alt="hinh" width="140px">
+                    <div></div>
+            </div>
+             <div class="app foter">
+                <h2>Tải app ngay thôi</h2>
+                <div class="dowload">
+                    <div>
+                    <a href="#"><img src="/img/CHPLAY.png" alt="hinh" width="20%">
+                        
+                    </a></div>
+                    <a href="#">
+                        <div><img src="/img/Available_on_the_App_Store_logo.png" alt="hinh" width="20%"></div>
+                    </a>
+                </div>
+             </div>
+        </div>
+     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/app.js"></script>
 </html>
